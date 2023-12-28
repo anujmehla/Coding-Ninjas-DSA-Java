@@ -1,0 +1,11 @@
+
+9
+java:S1643"Use a StringBuilder instead.(ÎõÓì8¼ê–“Ç1
+>
+java:S1643"Use a StringBuilder instead.(°ı¸¥úÿÿÿÿ8¼ê–“Ç1
+9
+java:S1643"Use a StringBuilder instead.(ÎõÓì8œÛ¡“Ç1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( Ä¢8¾ê–“Ç1
+L	java:S106"+Replace this use of System.out by a logger.(­øïşÿÿÿÿ8§×—“Ç1
+f
+java:S1854!"DRemove this useless assignment to local variable "currentWordStart".(²«”–ıÿÿÿÿ8¹Û¡“Ç1

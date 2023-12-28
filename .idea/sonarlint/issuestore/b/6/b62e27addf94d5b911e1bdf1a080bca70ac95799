@@ -1,0 +1,9 @@
+
+9
+java:S1643."Use a StringBuilder instead.(ÄŠ”£8Ø„ÄäÉ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(øÁÓ‰ıÿÿÿÿ8Ú„ÄäÉ1
+L	java:S106"+Replace this use of System.out by a logger.(ÛĞûØúÿÿÿÿ8Š…ÄäÉ1
+U
+java:S1854"8Remove this useless assignment to local variable "ptrB".(å¾Ã8‹…ÄäÉ1
+^
+java:S1659"ADeclare "ptrB" and all following declarations on a separate line.(·ùáˆ8àñäÉ1

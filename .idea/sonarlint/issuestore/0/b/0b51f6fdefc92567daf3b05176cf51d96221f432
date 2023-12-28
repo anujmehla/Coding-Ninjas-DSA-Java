@@ -1,0 +1,13 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ã¡§³üÿÿÿÿ8¥ÓÓÓÊ1
+i
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(æÛÏƒ8§ÓÓÓÊ1
+G	java:S106
+"+Replace this use of System.out by a logger.(¶ÎŒæ8ºÓÓÓÊ1
+G	java:S106"+Replace this use of System.out by a logger.(™•ÓÊ8½ÓÓÓÊ1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÛÏƒ8½ÓÓÓÊ1
+G	java:S106"+Replace this use of System.out by a logger.(ÿ‡¬º8¿ÓÓÓÊ1
+K
+java:S1068")Remove this unused "seats" private field.(Ô½úùùÿÿÿÿ8ÃÓÓÓÊ1
+E
+java:S1068")Remove this unused "speed" private field.(‡ÚÙ)8ÄÓÓÓÊ1
