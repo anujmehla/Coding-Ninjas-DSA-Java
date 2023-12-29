@@ -90,8 +90,6 @@ n
 n
 >src/dataStructureAndAlgo/lecture3recursion/NumberOfDigits.java,3\2\322a17e8b885e2c1994f559601656bd5b6ffe344
 o
-?src/dataStructureAndAlgo/Lecture3Recursion/FibanacciNumber.java,9\3\9382edccde19a524b9606fdaf6e11846bd01ad9f
-o
 ?src/dataStructureAndAlgo/Lecture3Recursion/FibonacciNumber.java,1\f\1f0f352597d89502118fa9cfdfa1c8daf09338ff
 t
 Dsrc/dataStructureAndAlgo/Lecture3Recursion/doubt/GuessTheOutput.java,b\e\be922b860dbd5ece82e96692ea84535d4443c7eb
@@ -101,3 +99,13 @@ j
 :src/dataStructureAndAlgo/Lecture3Recursion/SumOfArray.java,5\6\56e3f844403d6c6665855f7777a985e5e3f24ecf
 r
 Bsrc/dataStructureAndAlgo/Lecture3Recursion/CheckNumberInArray.java,7\e\7e5ab14e898dd486ff99cefa38dae68b3ff8abb2
+p
+@src/dataStructureAndAlgo/Lecture3Recursion/FirstIndexNumber.java,8\5\85fccedacfe09320c2600f6f56b06af7a68666f2
+q
+Asrc/dataStructureAndAlgo/Lecture3Recursion/LastIndexOfNumber.java,5\1\51e3c6aef899154ba54a32dc9e8720b84928559e
+r
+Bsrc/dataStructureAndAlgo/Lecture3Recursion/AllIndicesOfNumber.java,1\6\16ae43dfc0f3d12fde6c629e7fec636c6d7d34fd
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e

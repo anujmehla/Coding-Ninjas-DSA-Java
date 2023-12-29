@@ -1,9 +1,11 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†Ğõ‹ıÿÿÿÿ8ó¦üöÊ1
-L	java:S106"+Replace this use of System.out by a logger.(éÆáœıÿÿÿÿ8ü¦üöÊ1
+}
+java:S14881"`Immediately return this expression instead of assigning it to the temporary variable "smallAns".(íƒ¿è8¿¾²…Ë1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†Ğõ‹ıÿÿÿÿ8À¾²…Ë1
+G	java:S106"+Replace this use of System.out by a logger.(¸«Œ‹8Ç¾²…Ë1
 L
-java:S1197"*Move the array designators [] to the type.(ßåÌúüÿÿÿÿ8ü¦üöÊ1
+java:S1197"*Move the array designators [] to the type.(ßåÌúüÿÿÿÿ8È¾²…Ë1
 D
-java:S1125"'Remove the unnecessary boolean literal.(ºàŠŒ8ı¦üöÊ1
+java:S1125"'Remove the unnecessary boolean literal.(ºàŠŒ8È¾²…Ë1
 ^
-java:S1126"AReplace this if-then-else statement by a single return statement.(úÀµ¤8ı¦üöÊ1
+java:S1126"AReplace this if-then-else statement by a single return statement.(úÀµ¤8È¾²…Ë1
