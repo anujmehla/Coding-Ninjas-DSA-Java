@@ -2,7 +2,8 @@ package dataStructureAndAlgo.Lecture3Recursion;
 
 /*
 Question : All Indices of Number
-Given an array of length N and an integer x, you need to find all the indexes where x is present in the input array. Save all the indexes in the output array (in increasing order).
+Given an array of length N and an integer x, you need to find all the indexes where x is present in the input array.
+Save all the indexes in the output array (in increasing order).
 Do this recursively. Indexing in the array starts from 0.
 Hint:
 Try making a helper function with the required arguments and call the helper function from the allIndexes function.
@@ -36,7 +37,6 @@ public class AllIndicesOfNumber {
             return new int[0];
         }
         int[] smallOutput = allIndexes(input,x,startIndex+1);
-
         if (input[startIndex] == x) {
             int[] output = new int[smallOutput.length + 1];
             output[0] = startIndex;
