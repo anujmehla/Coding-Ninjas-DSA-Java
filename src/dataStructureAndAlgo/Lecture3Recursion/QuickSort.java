@@ -44,12 +44,12 @@ public class QuickSort {
     private static int partition(int[] input, int startIndex, int endIndex) {
         int pivot = input[startIndex];
         int count = 0;
-        for (int i = startIndex; i <= endIndex; i++) {
+        for (int i = startIndex+1; i <= endIndex; i++) {
             if (input[i]<pivot) {
                 count++;
             }
         }
-        int pivotPosition = startIndex+count;
+        int pivotPosition = startIndex + count;
         int temp; //for swapping purpose
         temp = input[pivotPosition];
         input[pivotPosition] = input[startIndex];
@@ -60,16 +60,19 @@ public class QuickSort {
 
         while (i<pivotPosition && j>pivotPosition) {
 
-            while (input[i]<input[pivotPosition]) {
+            while (input[i]<pivot) {
                 i++;
             }
-            while (input[j]>input[pivotPosition]) {
+            while (input[j]>pivot) {
                 j--;
             }
-
-            int swap = input[i];
-            input[i] = input[j];
-            input[j] = swap;
+            if (i < pivotPosition && j > pivotPosition) {
+                int swap = input[i];
+                input[i] = input[j];
+                input[j] = swap;
+                i++;
+                j--;
+            }
         }
         return pivotPosition;
     }
