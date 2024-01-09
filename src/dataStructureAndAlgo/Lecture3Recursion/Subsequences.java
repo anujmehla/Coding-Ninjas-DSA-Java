@@ -16,9 +16,8 @@ public class Subsequences {
     }
     public static String[] findSubsequences(String str) {
         //base case
-        if (str.length() == 0) {
-            String[] ans = {""};
-            return ans;
+        if (str.isEmpty()) {
+            return new String[]{""};
         }
 
         String[] smallAns = findSubsequences(str.substring(1));
