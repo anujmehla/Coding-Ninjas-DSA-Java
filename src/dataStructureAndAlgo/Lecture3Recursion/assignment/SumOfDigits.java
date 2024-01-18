@@ -24,8 +24,9 @@ Sample Output 2 :
 public class SumOfDigits {
     public static void main(String[] args) {
         int input = 12345;
-        System.out.println(sumOfDigits(input));
+        System.out.println(sumOfDigits1(input));
     }
+    //my solution
     public static int sumOfDigits(int input) {
         if (input==0) {
             return 0;
@@ -33,5 +34,14 @@ public class SumOfDigits {
         int ans = sumOfDigits(input/10);
         ans += input%10;
         return ans;
+    }
+    //their solution
+    public static int sumOfDigits1(int input) {
+        int sum;
+        if (input<10) {
+            return input;
+        }
+        sum = (input%10) + sumOfDigits1(input/10);
+        return sum;
     }
 }
