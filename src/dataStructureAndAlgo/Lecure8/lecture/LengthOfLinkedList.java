@@ -55,7 +55,7 @@ public class LengthOfLinkedList {
     }
     public static int length(Node<Integer> head) {
         int length = 0;
-        Node temp = head;
+        Node<Integer> temp = head;
         while (temp!=null) {
             length++;
             temp = temp.next;
