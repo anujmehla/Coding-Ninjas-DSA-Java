@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecure8.lecture.linkedList;
+package dataStructureAndAlgo.Lecture8.lecture.linkedList;
 
 public class Node<T> {
     T data;

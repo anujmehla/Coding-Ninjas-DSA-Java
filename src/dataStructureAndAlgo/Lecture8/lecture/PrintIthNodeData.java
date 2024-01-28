@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecure8.lecture;
+package dataStructureAndAlgo.Lecture8.lecture;
 
 /*
 Question : Print i-th Node Data

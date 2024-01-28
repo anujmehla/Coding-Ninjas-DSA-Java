@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecure8.assignment;
+package dataStructureAndAlgo.Lecture8.assignment;
 
 import java.util.Scanner;
 

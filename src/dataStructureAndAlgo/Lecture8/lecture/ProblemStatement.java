@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecure8.lecture;
+package dataStructureAndAlgo.Lecture8.lecture;
 
 /*
 Question : What will be the output ?

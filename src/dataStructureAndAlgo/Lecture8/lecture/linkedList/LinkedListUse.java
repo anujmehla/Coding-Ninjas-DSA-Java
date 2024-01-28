@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecure8.lecture.linkedList;
+package dataStructureAndAlgo.Lecture8.lecture.linkedList;
 
 import java.util.Scanner;
 

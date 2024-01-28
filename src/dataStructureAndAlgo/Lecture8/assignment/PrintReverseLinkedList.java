@@ -1,7 +1,7 @@
-package dataStructureAndAlgo.Lecure8.assignment;
+package dataStructureAndAlgo.Lecture8.assignment;
 
-import static dataStructureAndAlgo.Lecure8.assignment.FindNode.print;
-import static dataStructureAndAlgo.Lecure8.assignment.FindNode.takeInput;
+import static dataStructureAndAlgo.Lecture8.assignment.FindNode.print;
+import static dataStructureAndAlgo.Lecture8.assignment.FindNode.takeInput;
 
 /*
 Question : Print Reversed Linked List

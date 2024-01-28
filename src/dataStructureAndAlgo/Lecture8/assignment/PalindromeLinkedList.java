@@ -1,9 +1,9 @@
-package dataStructureAndAlgo.Lecure8.assignment;
+package dataStructureAndAlgo.Lecture8.assignment;
 
 import java.util.ArrayList;
 
-import static dataStructureAndAlgo.Lecure8.assignment.FindNode.print;
-import static dataStructureAndAlgo.Lecure8.assignment.FindNode.takeInput;
+import static dataStructureAndAlgo.Lecture8.assignment.FindNode.print;
+import static dataStructureAndAlgo.Lecture8.assignment.FindNode.takeInput;
 
 /*
 Question : Palindrome Linked List
