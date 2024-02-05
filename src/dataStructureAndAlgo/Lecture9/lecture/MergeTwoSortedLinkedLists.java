@@ -54,6 +54,7 @@ public class MergeTwoSortedLinkedLists {
         print(mergedAndSortedList);
     }
 
+    //my solution
     public static Node<Integer> mergeTwoSorted(Node<Integer> head1, Node<Integer> head2) {
         if (head1 == null) {
             return head2;
@@ -91,5 +92,44 @@ public class MergeTwoSortedLinkedLists {
         }
 
         return result;
+    }
+
+    //their solution
+    public static Node<Integer> mergeTwoSorted2(Node<Integer> head1, Node<Integer> head2) {
+        if (head1 == null) {
+            return head2;
+        }
+        if (head2 == null) {
+            return head1;
+        }
+        Node<Integer> newHead = null;
+        Node<Integer> newTail = null;
+        if (head1.data < head2.data) {
+            newHead = head1;
+            newTail = head1;
+            head1 = head1.next;
+        } else {
+            newHead = head2;
+            newTail = head2;
+            head2 = head2.next;
+        }
+        while (head1 != null && head2 != null) {
+            if (head1.data < head2.data) {
+                newTail.next = head1;
+                newTail = newTail.next;
+                head1 = head1.next;
+            } else {
+                newTail.next = head2;
+                newTail = newTail.next;
+                head2 = head2.next;
+            }
+        }
+        if (head1 != null) {
+            newTail.next = head1;
+        }
+        if (head2 != null) {
+            newTail.next = head2;
+        }
+        return newHead;
     }
 }
