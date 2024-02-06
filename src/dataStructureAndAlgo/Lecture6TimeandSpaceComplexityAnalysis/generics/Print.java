@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture6.generics;
+package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis.generics;
 
 public class Print {
     //this is how to create a generic method

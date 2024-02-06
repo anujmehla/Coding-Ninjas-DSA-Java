@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture6.generics;
+package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis.generics;
 
 //this is how to create a generic class
 public class Pair<T,V> {

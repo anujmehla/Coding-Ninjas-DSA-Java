@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture6;
+package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis;
 
 abstract class A {
     int i;

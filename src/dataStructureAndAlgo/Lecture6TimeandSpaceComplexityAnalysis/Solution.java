@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture6;
+package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis;
 
 interface Aa {
     public void method();
