@@ -26,7 +26,7 @@ public class StackUsingArray {
         }
         return data[top];
     }
-    public void push(int element) throws StackFullException{
+    public void push(int element) {
         if (size() == data.length) {
             doubleCapacity();
             //stack full
