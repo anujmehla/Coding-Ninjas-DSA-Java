@@ -40,7 +40,7 @@ false
 public class CheckRedundantBrackets {
     public static void main(String[] args) {
         String input = "(x+y*(a-b))";
-        System.out.println(checkRedundantBrackets(input));
+        System.out.println(checkRedundantBrackets2(input));
     }
     // my solution
     // approach is to : find the number of elements between the two brackets. If elements <= 1 means it's redundant.
