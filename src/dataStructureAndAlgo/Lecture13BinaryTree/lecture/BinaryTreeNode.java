@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture13BinaryTree;
+package dataStructureAndAlgo.Lecture13BinaryTree.lecture;
 
 public class BinaryTreeNode<T> {
     public T data;

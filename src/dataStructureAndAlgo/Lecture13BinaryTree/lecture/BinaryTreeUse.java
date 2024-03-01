@@ -1,7 +1,8 @@
-package dataStructureAndAlgo.Lecture13BinaryTree;
+package dataStructureAndAlgo.Lecture13BinaryTree.lecture;
 
 import dataStructureAndAlgo.Lecture11Queues.QueueUsingLL;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
+import dataStructureAndAlgo.Lecture13BinaryTree.lecture.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
