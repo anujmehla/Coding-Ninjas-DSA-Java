@@ -1,7 +1,7 @@
 package dataStructureAndAlgo.Lecture11Queues;
 
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
-import dataStructureAndAlgo.Lecture9.util.Node;
+import dataStructureAndAlgo.Lecture9LinkedList2.util.Node;
 
 public class QueueUsingLL<T> {
     private Node<T> rear;
