@@ -1,0 +1,13 @@
+Why java ? Why not c++ ?
+Answer we got is java is a platform independent language.
+
+How language works ?
+Only thing computer understands is binary. We can't write complex codes using binary numbers, that would be cumbersome.
+
+
+i = i+1              -> compiler              -> 110001
+
+compiler : it converts high level language to low level language.
+
+What is platform independence ?
+
