@@ -1,5 +1,5 @@
 Why java ? Why not c++ ?
-Answer we got is java is a platform independent language.
+Answer we got is, java is a platform independent language.
 
 How language works ?
 Only thing computer understands is binary. We can't write complex codes using binary numbers, that would be cumbersome.
@@ -11,3 +11,15 @@ compiler : it converts high level language to low level language.
 
 What is platform independence ?
 
+cpp file -> compiler -> a.out -> processor1 work
+cpp file -> compiler -> a.out -> processor2 won't work
+
+c++ executable file is platform dependent
+then to run it on different processor, I will need another executable file
+
+Java is different
+.java -> compiler -> .class -> processor1 works
+.java -> compiler -> .class -> processor1 works
+
+How does it works ?
+.class file doesn't directly runs on processor, it runs on jvm (Java Virtual Machine) which is platform dependant.
