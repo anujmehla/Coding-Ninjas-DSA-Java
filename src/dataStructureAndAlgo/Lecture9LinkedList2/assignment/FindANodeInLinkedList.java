@@ -2,7 +2,8 @@ package dataStructureAndAlgo.Lecture9LinkedList2.assignment;
 
 import dataStructureAndAlgo.Lecture9LinkedList2.util.Node;
 
-import java.util.LinkedList;
+import static dataStructureAndAlgo.Lecture9LinkedList2.util.LinkedListUtilityClass.print;
+import static dataStructureAndAlgo.Lecture9LinkedList2.util.LinkedListUtilityClass.takeInput;
 
 /*
 Problem : Find a Node in Linked List (recursive)
@@ -38,18 +39,22 @@ Sample Output 2 :
  */
 public class FindANodeInLinkedList {
     public static void main(String[] args) {
-        LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.add(3);
-        linkedList.add(4);
-        linkedList.add(5);
-        linkedList.add(2);
-        linkedList.add(6);
-        linkedList.add(1);
-        linkedList.add(9);
-
-
+        Node<Integer> head = takeInput(); //100 200 300 400 9000 -34 -1
+        print(head);
+        System.out.println("Index of element is "+findNodeRec(head,-34));
     }
     public static int findNodeRec(Node<Integer> head, int n) {
-        return 0;
+        if (head == null) {
+            return -1;
+        }
+        if (head.data.equals(n)) {
+            return 0;
+        }
+        int smallIndex = findNodeRec(head.next,n);
+        if (smallIndex == -1) {
+            return smallIndex;
+        } else {
+            return smallIndex+1;
+        }
     }
 }
