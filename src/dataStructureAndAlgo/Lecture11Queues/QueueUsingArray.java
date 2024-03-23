@@ -3,6 +3,9 @@ package dataStructureAndAlgo.Lecture11Queues;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueFullException;
 
+/*
+time complexity of all the operations is O(1)
+ */
 public class QueueUsingArray {
 
     private int[] data;

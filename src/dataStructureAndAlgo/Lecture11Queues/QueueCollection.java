@@ -6,7 +6,6 @@ import java.util.Stack;
 
 public class QueueCollection {
     public static void main(String[] args) {
-
         Queue<Integer> queue = new LinkedList<>();
         Stack<Integer> stack = new Stack<>();
         queue.add(5);
