@@ -1,5 +1,8 @@
 package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis.assignment;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*
 Question : Find the Unique Element
 Problem statement
@@ -46,10 +49,32 @@ Sample Output 2:
  */
 public class FindUniqueElement {
     public static void main(String[] args) {
-
+        int[] arr = {2,4,7,2,7};
+        System.out.println(findUnique(arr));
+    }
+    //my solution
+    public static int findUnique(int[] arr) {
+        if (arr.length == 0) {
+            return -1;
+        }
+        int ans = 0;
+        for (int i : arr) {
+            ans ^=i;
+        }
+        return ans;
     }
 
-    public static int findUnique(int[] arr) {
-        return 0;
+    /*
+    Time Complexity : O(n)
+    Space Complexity : O(1)
+    Where 'n' is the size of the input array/list
+    */
+    //their solution
+    public static int findUnique2(int[] arr) {
+        int XOR = 0;
+        for (int i = 0; i < arr.length; i++) {
+            XOR ^= arr[i];
+        }
+        return XOR;
     }
 }
