@@ -1,5 +1,9 @@
 package dataStructureAndAlgo.Lecture11Queues.assignment;
 
+import dataStructureAndAlgo.Lecture11Queues.QueueUsingArray;
+import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueFullException;
+
+import java.util.LinkedList;
 import java.util.Queue;
 
 /*
@@ -40,10 +44,25 @@ Sample Output 2:
  */
 public class ReverseQueue {
     public static void main(String[] args) {
-
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(2);
+        queue.add(8);
+        queue.add(15);
+        queue.add(1);
+        queue.add(10);
+        reverseQueue(queue);
+        int queueSize = queue.size();
+        for (int i = 0; i < queueSize; i++) {
+            System.out.println(queue.remove());
+        }
     }
-//*note : image is available for this question
+//*note : image is available for this question in the image folder
     public static void reverseQueue(Queue<Integer> input) {
-
+        if (input.size() <= 1) {
+            return;
+        }
+        int front = input.poll();
+        reverseQueue(input);
+        input.add(front);
     }
 }
