@@ -9,5 +9,5 @@ public class QueueUsingStacks<T> {
         s1 = new Stack<>();
         s2 = new Stack<>();
     }
-
+    //size, empty, enqueue, dequeue, front
 }

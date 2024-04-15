@@ -3,6 +3,8 @@ package dataStructureAndAlgo.Lecture12Trees.assignment;
 import dataStructureAndAlgo.Lecture11Queues.QueueUsingLL;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /*
@@ -32,7 +34,7 @@ Sum of node 1 and it's child (15) is maximum among all the nodes, so the output 
  */
 public class NodeHavingSumOfChildrenAndNodeIsMax {
     public static void main(String[] args) {
-        TreeNode<Integer> root = takeInput();
+        TreeNode<Integer> root = takeInput();  //1 3 2 3 4 1 6 1 5 1 7 0 0 1 8 0
         print(root);
         System.out.println(maxSumNode(root).data);
     }
@@ -88,8 +90,62 @@ public class NodeHavingSumOfChildrenAndNodeIsMax {
             }
         }
     }
-    public static TreeNode<Integer> maxSumNode(TreeNode<Integer> root) {
 
-        return null;
+    public static TreeNode<Integer> maxSumNode(TreeNode<Integer> root) {
+        if (root == null) return null;
+
+        Queue<TreeNode<Integer>> queue = new LinkedList<>();
+        queue.offer(root);
+
+        TreeNode<Integer> maxNode = root;
+        int maxSum = root.data;
+
+        while (!queue.isEmpty()) {
+            TreeNode<Integer> current = queue.poll();
+            int currentSum = current.data; // Start sum with the node's own data
+            for (TreeNode<Integer> child : current.children) {
+                currentSum += child.data;
+                queue.offer(child);
+            }
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
+                maxNode = current;
+            }
+        }
+        return maxNode;
     }
+
+    //their solution
+    static class MaxNodePair<T> {
+        TreeNode<T> node;
+        int sum;
+    }
+    public static TreeNode<Integer> maxSumNode2(TreeNode<Integer> root) {
+        return maxSumNodeHelper(root).node;
+    }
+
+    public static MaxNodePair<Integer> maxSumNodeHelper(TreeNode<Integer> root) {
+        if (root == null) {
+            MaxNodePair<Integer> pair = new MaxNodePair<>();
+            pair.node = null;
+            pair.sum = Integer.MIN_VALUE;
+            return pair;
+        }
+        int sum = root.data;
+        for (TreeNode<Integer> child : root.children) {
+            sum += child.data;
+        }
+        MaxNodePair<Integer> ans = new MaxNodePair<>();
+        ans.node = root;
+        ans.sum = sum;
+        for (TreeNode<Integer> child : root.children) {
+            MaxNodePair<Integer> childAns = maxSumNodeHelper(child);
+            if (childAns.sum > ans.sum) {
+                ans = childAns;
+            }
+        }
+        return ans;
+    }
+
+
 }
