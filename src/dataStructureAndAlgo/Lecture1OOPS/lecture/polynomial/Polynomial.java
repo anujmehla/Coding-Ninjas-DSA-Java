@@ -31,7 +31,7 @@ public class Polynomial {
     }
 
     public int degree() {
-
+        return 0;
     }
 
     public void print() {
@@ -100,10 +100,10 @@ public class Polynomial {
     }
 
     public int evaluate(int x) {
-
+        return 0;
     }
 
     public static Polynomial add(Polynomial p1, Polynomial p2) {
-
+        return null;
     }
 }
