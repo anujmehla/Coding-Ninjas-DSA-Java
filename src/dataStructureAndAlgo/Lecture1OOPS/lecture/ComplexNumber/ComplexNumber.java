@@ -1,18 +1,17 @@
-package dataStructureAndAlgo.Lecture1OOPS.lecture;
+package dataStructureAndAlgo.Lecture1OOPS.lecture.ComplexNumber;
 
 public class ComplexNumber {
     private int real;
     private int imaginary;
-    char imaginaryUnit;
+//    char imaginaryUnit; need not to handled separately
 
     ComplexNumber(int real, int imaginary) {
         this.real = real;
         this.imaginary = imaginary;
-        imaginaryUnit = '+';
     }
 
     public void print() {
-        System.out.println(real+""+ imaginaryUnit +imaginary+"i");
+        System.out.println(this.toString());
     }
 
     public void add(ComplexNumber c) {
@@ -33,20 +32,8 @@ public class ComplexNumber {
         this.imaginary = ansImaginary;
     }
 
-
-    //the solution to this function was not provided : not working as it is supposed to do
     public ComplexNumber conjugate() {
-        if (imaginaryUnit == '+') {
-            System.out.println("++++++++++++++case");
-            ComplexNumber c = new ComplexNumber(this.real, this.imaginary);
-            c.imaginary = '-';
-            return c;
-        } else {
-            System.out.println("--------------case");
-            ComplexNumber c = new ComplexNumber(this.real, this.imaginary);
-            c.imaginary = '+';
-            return c;
-        }
+        return new ComplexNumber(this.real, -this.imaginary);
     }
 
     public int getReal() {
@@ -63,5 +50,9 @@ public class ComplexNumber {
 
     public void setImaginary(int imaginary) {
         this.imaginary = imaginary;
+    }
+    @Override
+    public String toString() {
+        return real + (imaginary >= 0 ? "+" : "")+imaginary + "i";
     }
 }

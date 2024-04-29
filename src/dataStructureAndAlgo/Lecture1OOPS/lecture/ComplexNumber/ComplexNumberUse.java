@@ -1,8 +1,8 @@
-package dataStructureAndAlgo.Lecture1OOPS.lecture;
+package dataStructureAndAlgo.Lecture1OOPS.lecture.ComplexNumber;
 
 public class ComplexNumberUse {
     public static void main(String[] args) {
-        ComplexNumber  c1 = new ComplexNumber(2,3);
+        ComplexNumber c1 = new ComplexNumber(2,3);
         c1.print();
 
 
