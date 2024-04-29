@@ -4,6 +4,9 @@ import dataStructureAndAlgo.Lecture1OOPS.lecture.DynamicArray.DynamicArray;
 
 public class Polynomial {
     //   DynamicArray coefficient;
+
+    //approach : we will use array to store the polynomial,
+    // indices of array will act as degree and its value as coefficient
     int[] degCoeff;
 
     Polynomial() {
