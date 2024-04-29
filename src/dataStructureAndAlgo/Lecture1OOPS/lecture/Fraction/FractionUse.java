@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture1OOPS.lecture;
+package dataStructureAndAlgo.Lecture1OOPS.lecture.Fraction;
 
 public class FractionUse {
     public static void main(String[] args) {
