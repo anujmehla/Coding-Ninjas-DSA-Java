@@ -3,6 +3,7 @@ package dataStructureAndAlgo.Lecture13BinaryTree.lecture;
 import dataStructureAndAlgo.Lecture11Queues.QueueUsingLL;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
 import dataStructureAndAlgo.Lecture13BinaryTree.lecture.BinaryTreeNode;
+import dataStructureAndAlgo.Lecture14BinaryTree2.lecture.BalancedTreeReturn;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -27,7 +28,10 @@ public class BinaryTreeUse {
 //        System.out.println("New Tree");
 //        printTree(newRoot);
 
-        System.out.println("Is Balanced : "+isBalanced(root));
+//        System.out.println("Is Balanced : "+isBalanced(root));
+        System.out.println("Is Balanced : "+isBalancedBetter(root).isBalanced);
+
+        System.out.println("Diameter is : "+diameter(root));
 
 //        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(1);
 //        BinaryTreeNode<Integer> node1 = new BinaryTreeNode<>(2);
@@ -268,7 +272,7 @@ public class BinaryTreeUse {
         }
         int leftHeight = height(root.left);
         int rightHeight = height(root.right);
-        return Math.max(leftHeight,rightHeight)+1;
+        return 1 + Math.max(leftHeight,rightHeight);
     }
 
     /*
@@ -335,5 +339,41 @@ public class BinaryTreeUse {
         boolean isRightBalanced = isBalanced(root.right);
 
         return isRightBalanced && isLeftBalanced;
+    }
+    public static BalancedTreeReturn isBalancedBetter(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            int height = 0;
+            boolean isBalanced = true;
+            BalancedTreeReturn ans = new BalancedTreeReturn();
+            ans.height = height;
+            ans.isBalanced = isBalanced;
+            return ans;
+        }
+        BalancedTreeReturn leftOutput = isBalancedBetter(root.left);
+        BalancedTreeReturn rightOutput = isBalancedBetter(root.right);
+        boolean isBal = true;
+        int height = Math.max(leftOutput.height, rightOutput.height)+1;
+
+        if (Math.abs(leftOutput.height - rightOutput.height) > 1) {
+            isBal = false;
+        }
+
+        if (!leftOutput.isBalanced || !rightOutput.isBalanced) {
+            isBal = false;
+        }
+
+        BalancedTreeReturn ans = new BalancedTreeReturn();
+        ans.height = height;
+        ans.isBalanced = isBal;
+        return ans;
+    }
+    public static int diameter(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            return 0;
+        }
+        int option1 = height(root.left)+height(root.right);
+        int option2 = diameter(root.left);
+        int option3 = diameter(root.right);
+        return Math.max(option1, Math.max(option2,option3));
     }
 }
