@@ -1,0 +1,13 @@
+Recursion in computer science is a method where the solution to a problem depends on solutions to smaller instances
+of the same problem.
+
+
+eg.
+
+n! = n * (n-1) * (n-2) * (n-3)*...................*1
+
+n! = n * (n-1)!
+
+(n-1)! = (n-1) * (n-2)!
+
+(n-2)! = (n-2) * (n-3)!

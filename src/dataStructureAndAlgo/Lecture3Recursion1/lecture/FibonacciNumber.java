@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture3Recursion1;
+package dataStructureAndAlgo.Lecture3Recursion1.lecture;
 
 public class FibonacciNumber {
     public static void main(String[] args) {

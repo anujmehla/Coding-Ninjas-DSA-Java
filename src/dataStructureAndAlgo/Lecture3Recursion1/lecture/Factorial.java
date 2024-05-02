@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture3Recursion1;
+package dataStructureAndAlgo.Lecture3Recursion1.lecture;
 
 public class Factorial {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Factorial {
         if (num == 0) {
             return 1;
         }
-        num*=fact(num-1);
+        num *= fact(num-1);
 
         return num;
     }
