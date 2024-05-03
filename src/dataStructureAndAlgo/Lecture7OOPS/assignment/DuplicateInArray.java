@@ -1,7 +1,4 @@
-package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis.assignment;
-
-import java.util.HashMap;
-import java.util.Map;
+package dataStructureAndAlgo.Lecture7OOPS.assignment;
 
 /*
 Question : Duplicate in array

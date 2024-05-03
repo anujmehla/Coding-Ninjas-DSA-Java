@@ -1,6 +1,4 @@
-package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis.assignment;
-
-import java.util.Arrays;
+package dataStructureAndAlgo.Lecture7OOPS.assignment;
 
 /*
 Question : Rotate Array

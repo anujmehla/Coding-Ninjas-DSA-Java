@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis.assignment;
+package dataStructureAndAlgo.Lecture7OOPS.assignment;
 
 import java.util.*;
 

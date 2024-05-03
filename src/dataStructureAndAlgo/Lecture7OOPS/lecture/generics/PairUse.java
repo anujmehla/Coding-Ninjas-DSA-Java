@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture6TimeandSpaceComplexityAnalysis.generics;
+package dataStructureAndAlgo.Lecture7OOPS.lecture.generics;
 
 public class PairUse {
     public static void main(String[] args) {
