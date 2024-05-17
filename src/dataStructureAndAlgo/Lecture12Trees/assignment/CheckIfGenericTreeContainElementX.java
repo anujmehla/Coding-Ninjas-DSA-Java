@@ -2,9 +2,13 @@ package dataStructureAndAlgo.Lecture12Trees.assignment;
 
 import dataStructureAndAlgo.Lecture11Queues.QueueUsingLL;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
+import dataStructureAndAlgo.Lecture12Trees.lecture.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import static dataStructureAndAlgo.Lecture12Trees.lecture.TreeUse.takeInput;
+import static dataStructureAndAlgo.Lecture12Trees.lecture.TreeUse.takeInputLevelWise;
 
 /*
 Problem : Check if generic tree contains x
@@ -37,18 +41,11 @@ false
 Explanation
 Since, 4 is not present in the given tree, so the answer is false.
  */
-class TreeNode<T> {
-    T data;
-    ArrayList<TreeNode<T>> children;
-    TreeNode(T data) {
-        this.data = data;
-        children = new ArrayList<>();
-    }
-}
+
 public class CheckIfGenericTreeContainElementX {
     public static void main(String[] args) {
         //5 1 3 2 3 4 1 6 1 5 1 7 0 0 1 8 0
-        TreeNode<Integer> root = takeInput();
+        TreeNode<Integer> root = takeInputLevelWise();
         System.out.println(checkIfContainsX(root,5));
     }
     //my solution
@@ -81,30 +78,5 @@ public class CheckIfGenericTreeContainElementX {
         }
         return false;
     }
-    public static TreeNode<Integer> takeInput() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter root data");
-        int rootData = scanner.nextInt();
-        QueueUsingLL<TreeNode<Integer>> pendingNodes = new QueueUsingLL<>();
-        TreeNode<Integer> root = new TreeNode<>(rootData);
-        pendingNodes.enqueue(root);
-        while (!pendingNodes.isEmpty()) {
-            try {
-                TreeNode<Integer> frontNode = pendingNodes.dequeue();
-                System.out.println("Enter num of children of " + frontNode.data);
-                int numChildren = scanner.nextInt();
-                for (int i = 0; i < numChildren; i++) {
-                    System.out.println("Enter "+(i+1)+"th child of "+frontNode.data);
-                    int child = scanner.nextInt();
-                    TreeNode<Integer> childNode = new TreeNode<>(child);
-                    frontNode.children.add(childNode);
-                    pendingNodes.enqueue(childNode);
-                }
-            } catch (QueueEmptyException e) {
-                //Shouldn't come here
-                return null;
-            }
-        }
-        return root;
-    }
+
 }

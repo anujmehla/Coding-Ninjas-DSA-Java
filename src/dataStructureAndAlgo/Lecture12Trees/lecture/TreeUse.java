@@ -5,7 +5,13 @@ import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
 
 import java.util.Scanner;
 
-public class TreeUse {
+//made class final so that no one can inherit it
+public final class TreeUse {
+
+    private TreeUse() {
+        // made constructor private so that the class can't be instantiated
+    }
+
     public static void main(String[] args) {
 
         TreeNode<Integer> root = takeInputLevelWise();

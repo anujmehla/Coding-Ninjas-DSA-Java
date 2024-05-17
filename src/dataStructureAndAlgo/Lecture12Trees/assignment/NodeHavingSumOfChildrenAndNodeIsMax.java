@@ -2,6 +2,7 @@ package dataStructureAndAlgo.Lecture12Trees.assignment;
 
 import dataStructureAndAlgo.Lecture11Queues.QueueUsingLL;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
+import dataStructureAndAlgo.Lecture12Trees.lecture.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -34,8 +35,10 @@ Sum of node 1 and it's child (15) is maximum among all the nodes, so the output 
  */
 public class NodeHavingSumOfChildrenAndNodeIsMax {
     public static void main(String[] args) {
+        //5 3 1 2 3 1 15 2 4 5 1 6 0 0 0 0
         TreeNode<Integer> root = takeInput();  //1 3 2 3 4 1 6 1 5 1 7 0 0 1 8 0
         print(root);
+        System.out.println("The maxNode is ");
         System.out.println(maxSumNode(root).data);
     }
 
@@ -120,6 +123,7 @@ public class NodeHavingSumOfChildrenAndNodeIsMax {
         TreeNode<T> node;
         int sum;
     }
+
     public static TreeNode<Integer> maxSumNode2(TreeNode<Integer> root) {
         return maxSumNodeHelper(root).node;
     }
@@ -146,6 +150,4 @@ public class NodeHavingSumOfChildrenAndNodeIsMax {
         }
         return ans;
     }
-
-
 }
