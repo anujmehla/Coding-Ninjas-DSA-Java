@@ -24,7 +24,7 @@ public final class TreeUse {
         int k = 2;
         System.out.println("Nodes at depth "+k+" are ");
         printAtK(root,2);
-        System.out.println("Number of leaf nodes in a tree are " + numberOfLeafNodes(root));
+        System.out.println("Number of leaf nodes in a tree are " + countLeafNodes(root));
         System.out.println("Pre Order Traversal is ");
         preOrder(root);
         System.out.println("\nPost Order Traversal is ");
@@ -276,18 +276,18 @@ public final class TreeUse {
         }
     }
 
-    private static int numberOfLeafNodes(TreeNode<Integer> root) {
+    private static int countLeafNodes(TreeNode<Integer> root) {
         if (root == null) {
             return 0;
         }
-        int ans = 0;
         if (root.children.isEmpty()) {
-            ans++;
+            return 1;
         }
+        int count = 0;
         for (TreeNode<Integer> child : root.children) {
-            ans += numberOfLeafNodes(child);
+            count += countLeafNodes(child);
         }
-        return ans;
+        return count;
     }
 
     public static void preOrder(TreeNode<Integer> root) {
