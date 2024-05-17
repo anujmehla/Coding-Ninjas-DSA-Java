@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture12Trees;
+package dataStructureAndAlgo.Lecture12Trees.lecture;
 
 import java.util.ArrayList;
 

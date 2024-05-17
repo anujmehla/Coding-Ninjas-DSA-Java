@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture11Queues;
+package dataStructureAndAlgo.Lecture11Queues.lecture;
 
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueFullException;

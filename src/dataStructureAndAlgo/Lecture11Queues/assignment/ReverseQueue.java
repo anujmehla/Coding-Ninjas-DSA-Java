@@ -1,8 +1,5 @@
 package dataStructureAndAlgo.Lecture11Queues.assignment;
 
-import dataStructureAndAlgo.Lecture11Queues.QueueUsingArray;
-import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueFullException;
-
 import java.util.LinkedList;
 import java.util.Queue;
 

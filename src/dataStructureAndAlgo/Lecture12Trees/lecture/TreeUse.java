@@ -1,9 +1,8 @@
-package dataStructureAndAlgo.Lecture12Trees;
+package dataStructureAndAlgo.Lecture12Trees.lecture;
 
 import dataStructureAndAlgo.Lecture11Queues.QueueUsingLL;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
 
-import java.util.Queue;
 import java.util.Scanner;
 
 public class TreeUse {
@@ -13,8 +12,13 @@ public class TreeUse {
         printLevelWise2(root);
         System.out.println("Number of nodes are " + numNode(root));
         System.out.println("Sum of nodes is " + sumOfAllNodes(root));
+        System.out.println("Largest node in the tree is " + largestNode(root));
         System.out.println("Nodes greater than x are " + numNodeGreater(root, 5));
         System.out.println("Height of the tree is " + getHeight1(root));
+        int k = 2;
+        System.out.println("Nodes at depth "+k+" are ");
+        printAtK(root,2);
+        System.out.println("Number of leaf nodes in a tree are " + numberOfLeafNodes(root));
         System.out.println("Pre Order Traversal is ");
         preOrder(root);
         System.out.println("\nPost Order Traversal is ");
@@ -266,6 +270,20 @@ public class TreeUse {
         }
     }
 
+    private static int numberOfLeafNodes(TreeNode<Integer> root) {
+        if (root == null) {
+            return 0;
+        }
+        int ans = 0;
+        if (root.children.isEmpty()) {
+            ans++;
+        }
+        for (TreeNode<Integer> child : root.children) {
+            ans += numberOfLeafNodes(child);
+        }
+        return ans;
+    }
+
     public static void preOrder(TreeNode<Integer> root) {
         if (root == null) {
             return;
@@ -285,13 +303,13 @@ public class TreeUse {
         System.out.print(root.data+" ");
     }
 
-    public static int largest(TreeNode<Integer> root) {
+    public static int largestNode(TreeNode<Integer> root) {
         if (root == null) {
             return Integer.MIN_VALUE;
         }
         int ans = root.data;
         for (int i = 0; i < root.children.size(); i++) {
-            int childLargest = largest(root.children.get(i));
+            int childLargest = largestNode(root.children.get(i));
             if (childLargest > ans) {
                 ans = childLargest;
             }
