@@ -17,29 +17,32 @@ public class BinaryTreeUse {
 //        BinaryTreeNode<Integer> root = takeInput(s);
         BinaryTreeNode<Integer> root = takeInputLevelWise();
         printTree(root);
-        System.out.println("Number of Nodes in a binary tree : " + countNode(root));
-        System.out.println("Is Node present in the tree : " + isNodePresent(root, 7));
-        printLevelWise(root);
-        System.out.println("Largest Number in the tree is : "+largest(root));
-        System.out.println("Nodes greater than x are "+countNodesGreaterThanX(root,2));
-        System.out.println("Height of the tree is "+height(root));
-        System.out.println("Number of leaves of tree are "+numOfLeaves(root));
-        System.out.println("Print at depth k");
-        printAtDepthK(root,2);
-        BinaryTreeNode<Integer> newRoot = removeLeaves(root);
+//        System.out.println("Number of Nodes in a binary tree : " + countNode(root));
+//        System.out.println("Is Node present in the tree : " + isNodePresent(root, 7));
+//        printLevelWise(root);
+//        System.out.println("Largest Number in the tree is : "+largest(root));
+//        System.out.println("Nodes greater than x are "+countNodesGreaterThanX(root,2));
+//        System.out.println("Height of the tree is "+height(root));
+//        System.out.println("Number of leaves of tree are "+numOfLeaves(root));
+//        System.out.println("Print at depth k");
+//        printAtDepthK(root,2);
+//        BinaryTreeNode<Integer> newRoot = removeLeaves(root);
 //        System.out.println("New Tree");
 //        printTree(newRoot);
 
 //        System.out.println("Is Balanced : "+isBalanced(root));
-        System.out.println("Is Balanced : "+isBalancedBetter(root).isBalanced);
+//        System.out.println("Is Balanced : "+isBalancedBetter(root).isBalanced);
 
-        System.out.println("Diameter is : "+diameter(root));
+//        System.out.println("Diameter is : "+diameter(root));
 
 //        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(1);
 //        BinaryTreeNode<Integer> node1 = new BinaryTreeNode<>(2);
 //        root.left = node1;
 //        BinaryTreeNode<Integer> node2 = new BinaryTreeNode<>(3);
 //        root.right = node2;
+
+        inOrder(root);
+
 
 
     }
@@ -420,6 +423,33 @@ public class BinaryTreeUse {
     public static int diameterOfBinaryTree(BinaryTreeNode<Integer> root) {
         Pair2 pair2 = diameterHelper(root);
         return pair2.diameter;
+    }
+
+    public static void inOrder(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            return;
+        }
+        inOrder(root.left);
+        System.out.println(root.data + " ");
+        inOrder(root.right);
+    }
+
+    public static void preOrder(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            return;
+        }
+        System.out.println(root.data + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+    public static void postOrder(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data + " ");
     }
 }
 class Pair2{
