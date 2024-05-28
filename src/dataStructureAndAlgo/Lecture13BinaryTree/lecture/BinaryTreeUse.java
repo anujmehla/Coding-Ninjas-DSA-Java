@@ -4,7 +4,9 @@ import dataStructureAndAlgo.Lecture11Queues.QueueUsingLL;
 import dataStructureAndAlgo.Lecture11Queues.exceptions.QueueEmptyException;
 import dataStructureAndAlgo.Lecture13BinaryTree.lecture.BinaryTreeNode;
 import dataStructureAndAlgo.Lecture14BinaryTree2.lecture.BalancedTreeReturn;
+import dataStructureAndAlgo.Lecture14BinaryTree2.lecture.Pair;
 
+import java.net.Inet4Address;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -375,5 +377,57 @@ public class BinaryTreeUse {
         int option2 = diameter(root.left);
         int option3 = diameter(root.right);
         return Math.max(option1, Math.max(option2,option3));
+    }
+    //tc : O(n)
+    public Pair<Integer, Integer> heightDiameter(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            Pair<Integer,Integer> output = new Pair<>();
+            output.first = 0;
+            output.second = 0;
+            return output;
+        }
+        Pair<Integer,Integer> leftOutput = heightDiameter(root.left);
+        Pair<Integer,Integer> rightOutput = heightDiameter(root.right);
+        int height = 1 + Math.max(leftOutput.first,rightOutput.first);
+        int option1 = leftOutput.first + rightOutput.first;
+        int option2 = leftOutput.second;
+        int option3 = rightOutput.second;
+        int diameter = Math.max(option1,Math.max(option2,option3));
+        Pair<Integer,Integer> output = new Pair<>();
+        output.first = height;
+        output.second = diameter;
+        return output;
+    }
+
+    private static Pair2 diameterHelper(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            Pair2 pair = new Pair2(0, 0);
+            return pair;
+        }
+        Pair2 leftPair = diameterHelper(root.left);
+        Pair2 rightPair = diameterHelper(root.right);
+
+        int leftDiameter = leftPair.diameter;
+        int rightDiameter = rightPair.diameter;
+
+        int dist = leftPair.height + rightPair.height + 1;
+        int diameter = Math.max(leftDiameter, Math.max(rightDiameter, dist));
+        int height = Math.max(leftPair.height, rightPair.height) + 1;
+
+        return (new Pair2(diameter, height));
+    }
+
+    public static int diameterOfBinaryTree(BinaryTreeNode<Integer> root) {
+        Pair2 pair2 = diameterHelper(root);
+        return pair2.diameter;
+    }
+}
+class Pair2{
+    int diameter;
+    int height;
+
+    public Pair2(int diameter, int height) {
+        this.diameter = diameter;
+        this.height = height;
     }
 }
