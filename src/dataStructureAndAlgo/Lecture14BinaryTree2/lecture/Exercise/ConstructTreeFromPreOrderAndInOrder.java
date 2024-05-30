@@ -1,4 +1,4 @@
-package dataStructureAndAlgo.Lecture14BinaryTree2.assignment;
+package dataStructureAndAlgo.Lecture14BinaryTree2.lecture.Exercise;
 
 import dataStructureAndAlgo.Lecture13BinaryTree.lecture.BinaryTreeNode;
 
