@@ -2,6 +2,9 @@ package dataStructureAndAlgo.Lecture14BinaryTree2.assignment;
 
 import dataStructureAndAlgo.Lecture13BinaryTree.lecture.BinaryTreeNode;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 import static dataStructureAndAlgo.Lecture13BinaryTree.lecture.BinaryTreeUse.printTree;
 import static dataStructureAndAlgo.Lecture13BinaryTree.lecture.BinaryTreeUse.takeInputLevelWise;
 
@@ -43,14 +46,60 @@ image is available
 public class LevelOrderTraversal {
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = takeInputLevelWise();
-        printTree(root);
-        printLevelWise(root);
+//        printTree(root);
+        printLevelWise2(root);
     }
 
     public static void printLevelWise(BinaryTreeNode<Integer> root) {
         if (root == null) {
             return;
         }
+        Queue<BinaryTreeNode<Integer>> pendingNodes = new LinkedList<>();
+        pendingNodes.add(root);
+        pendingNodes.add(null);
 
+        while (!pendingNodes.isEmpty()) {
+            BinaryTreeNode<Integer> frontNode = pendingNodes.poll();
+
+            if (frontNode == null) {
+                System.out.println();
+                if (!pendingNodes.isEmpty()) {
+                    pendingNodes.add(null);
+                }
+            } else {
+                System.out.print(frontNode.data +" ");
+                if (frontNode.left != null) {
+                    pendingNodes.add(frontNode.left);
+                }
+                if (frontNode.right != null) {
+                    pendingNodes.add(frontNode.right);
+                }
+            }
+        }
+    }
+    public static void printLevelWise2(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            return;
+        }
+        Queue<BinaryTreeNode<Integer>> pendingNodes = new LinkedList<>();
+        pendingNodes.add(root);
+        pendingNodes.add(null);
+        while (!pendingNodes.isEmpty()) {
+            BinaryTreeNode<Integer> frontNode = pendingNodes.poll();
+            if (frontNode == null) {
+                System.out.println();
+                if (!pendingNodes.isEmpty()) {
+                    pendingNodes.add(null);
+                }
+            } else {
+                System.out.print(frontNode.data+" ");
+                if (frontNode.left != null) {
+                    pendingNodes.add(frontNode.left);
+                }
+                if (frontNode.right != null) {
+                    pendingNodes.add(frontNode.right);
+                }
+            }
+        }
     }
 }
