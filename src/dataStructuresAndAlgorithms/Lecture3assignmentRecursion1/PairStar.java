@@ -1,4 +1,4 @@
-package dataStructuresAndAlgorithms.assignmentRecursion1;
+package dataStructuresAndAlgorithms.Lecture3assignmentRecursion1;
 
 /*
 Question : Pair Star

@@ -1,4 +1,4 @@
-package introductionToJava.Test2;
+package introductionToJava.Test2AfterLecture12;
 
 /*
 Problem statement

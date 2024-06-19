@@ -1,6 +1,4 @@
-package Test2;
-
-import java.util.LinkedList;
+package dataStructuresAndAlgorithms.Test2AfterLecture11;
 
 /*
 Problem : Next number
