@@ -1,4 +1,4 @@
-package dataStructuresAndAlgorithms.test1;
+package dataStructuresAndAlgorithms.Test1AfterLecture6;
 
 /*
 Question : Does string 's' contains  string 't' ?
